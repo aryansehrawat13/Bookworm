@@ -1,2 +1,25 @@
+# Dependency directories
 node_modules/
+
+# Environment variables
 .env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# Optional: coverage/test
+coverage/
+
+# Optional: production builds
+dist/
+build/
