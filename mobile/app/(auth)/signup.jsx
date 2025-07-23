@@ -1,4 +1,4 @@
-import { View, Text, KeyboardAvoidingView, Platform, TextInput, TouchableOpacity, ActivityIndicator } from 'react-native'
+import { View, Text, KeyboardAvoidingView, Platform, TextInput, TouchableOpacity, ActivityIndicator, Alert } from 'react-native'
 import React from 'react'
 import styles from "../../assets/styles/signup.styles";
 import { Ionicons } from '@expo/vector-icons';
@@ -13,7 +13,7 @@ export default function Signup() {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-  const {user, isLoading, register} = useAuthStore();
+  const {isLoading, register} = useAuthStore();
 
   const router = useRouter();
 

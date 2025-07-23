@@ -7,9 +7,9 @@ const router = expres.Router();
 
 router.post("/", protectRoute, async (req, res) => {
     try {
-        const {title, caption, image, rating, user} = req.body;
+        const {title, caption, image, rating} = req.body;
 
-        if(!image || !title || !caption || !rating || !user) return res.status(400).send("All fields are required");
+        if(!image || !title || !caption || !rating ) return res.status(400).send("All fields are required");
 
         //upload image to cloudinary
         const uploadResponseawait = await cloudinary.uploader.upload(image);
